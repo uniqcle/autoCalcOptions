@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel = "stylesheet" href = "styles.css">
+
+	<title>Авто калькулятор</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-8">
+				<div class="auto" id = "auto_img">
+					<img src = "img/atlantic.jpg"/>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="auto_calc">
+					<form action="#" id = "auto_form">
+						<div class="row">
+							<h2>Hundai Solaris</h2>
+						</div>
+
+						<div class="row">
+							<div id = "modelSpecsHolder">1.4л (100 л.с) Ручная, 6 ступеней (6 МТ)	Active</div>				 
+						</div>
+
+						<div class="row">
+							<div id = "modelColor">Атлантик</div>				 
+						</div>
+
+						<div class="row">
+							Цена &nbsp; <div id="modelPriceHolder">	624 900 	</div> &nbsp;  рублей
+						</div>
+						<div class="row">
+							Цена &nbsp;  <div id="auto_price_dollar">9 190 </div > &nbsp;  долларов
+						</div>
+						<div class="row">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ordermodal">
+							 Заказать
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+ 
+
+
+		<!-- Настройка -->
+			<fosrm action="#" id = "auto_form_settings">
+				<div class="row">
+					<!-- Двигатель -->
+					<div class="col-md-4">
+
+						<h4>Двигатель</h4>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="engine" id="engine14" value="624900" checked>
+							<label class="form-check-label" for="engine14"> 1.4л (100 л.с) 	</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="engine" id="engine16" value="749900" >
+							<label class="form-check-label" for="engine16">	1.6л (123 л.с) </label>
+						</div>
+					</div>
+					
+					<!-- Коробка передач --> 
+					<div class="col-md-4">
+						<h4>Коробка передач</h4>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="topgear" id="topgear6mt" value="0" checked>
+							<label class="form-check-label" for="topgear6mt"> Ручная, 6 ступеней (6 МТ)	</label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="topgear" id="topgear6at" value="125000" >
+							<label class="form-check-label" for="topgear6at"> Автомат, 6 ступеней (6 АТ)</label>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<h4>Пакет (дополнительные опции)</h4>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="options" id="option_active" value="0" checked>
+							<label class="form-check-label" for="option_active"> Active </label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="options" id="option_conditioner" value="85000"  >
+							<label class="form-check-label" for="option_conditioner"> Active (кондиционер) </label>
+						</div>
+
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="options" id="option_climat" value="130000">
+							<label class="form-check-label" for="option_climat">  Комфорт (климатконтроль) </label>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="auto_colors">
+							<div class="row">
+								<h2>Выбрать цвет</h2>
+							</div>
+							<div class="row color_selected" id = "color_selected">
+								<img class = "rounded-circle" src = "img/atlantic_short.jpg" data-img = "img/atlantic.jpg" data-name = "Цвет Атлантик"/>
+								<img class = "rounded-circle" src = "img/manga_short.jpg" data-img = "img/manga.jpg" data-name = "Цвет манга"/>
+								<img class = "rounded-circle" src = "img/pyrit_short.jpg" data-img = "img/pyrit.jpg" data-name = "Цвет Пурит"/>
+								<img class = "rounded-circle" src = "img/reflex_short.jpg" data-img = "img/reflex.jpg" data-name = "Цвет рефлекс"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+
+<!-- Modal -->
+	<div class="modal fade" id="ordermodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Отправить заявку</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p></p>
+					<form action="#" class="form-inline">
+						<div class="form-group mx-sm-12 mb-2">
+							<label for="name" class="sr-only">Имя</label>
+							<input type="text" name = "name" class="form-control" id="name" placeholder="Имя">
+						</div>
+
+						<div class="form-group mx-sm-3 mb-2">
+							<label for="phone" class="sr-only">Телефон</label>
+							<input type="text" name = "phone" class="form-control" id="phone" placeholder="Телефон">
+						</div>
+
+						<button type="button" class="btn btn-primary">Заказать</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<script type="text/javascript" src = "autocalc.js"></script>
+</body>
+</html>
